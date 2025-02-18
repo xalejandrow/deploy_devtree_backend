@@ -5,7 +5,7 @@ const app = express();
 
 // Routing
 app.get('/', (req, res) => {
-  res.send('Hola Mundo en Express');
+  res.send('Hola Mundo en Express / TypeScript');
 });
 
 const port = process.env.PORT || 4000;

@@ -21,3 +21,12 @@ para ejecutar: npm run dev
 # Nodemon
 - npm i -D nodemon (-D en modo desarrollo, para que cuando lo despleguemos no se deploye en producción)
 - npm i --save-dev nodemon (--save-dev igual que -D en modo desarrollo)
+
+# TypeScript
+- npm i -D typescript ts-node
+ 
+    Agregar el `tsconfig.json`
+    Cambiar el `package.json`
+    Agregar carpeta src y mover archivo index.js a esta carpeta
+    Cambiar extensión de index.js -> index.ts
+- npm i -D @types/express 
