@@ -1,10 +1,8 @@
 import express from 'express'; // ESM Ecmascript modules
+import router from './router';
 
 const app = express();
 
-// Routing
-app.get('/', (req, res) => {
-  res.send('Hola Mundo en Express / TypeScript');
-});
+app.use('/', router)
 
 export default app;
