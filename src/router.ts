@@ -4,7 +4,7 @@ const router = Router();
 
 /** Autenticación y registro */
 router.post('/auth/register', (req, res) => {
-   console.log('Registro de usuario');
+   console.log('Desde Register');
 });
 
 export default router;
