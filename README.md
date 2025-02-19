@@ -29,4 +29,11 @@ para ejecutar: npm run dev
     Cambiar el `package.json`
     Agregar carpeta src y mover archivo index.js a esta carpeta
     Cambiar extensión de index.js -> index.ts
-- npm i -D @types/express 
+- npm i -D @types/express
+
+# Mongoose
+- npm i mongoose
+
+# Variables de entorno
+- npm i dovenv
+
