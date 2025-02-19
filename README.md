@@ -37,3 +37,6 @@ para ejecutar: npm run dev
 # Variables de entorno
 - npm i dovenv
 
+# Colores en la terminal para errores e información
+- npm i colors
+
