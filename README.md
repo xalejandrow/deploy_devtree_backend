@@ -40,3 +40,7 @@ para ejecutar: npm run dev
 # Colores en la terminal para errores e información
 - npm i colors
 
+# Hasheando los passwords
+- npm i bcrypt
+- npm i --save-dev @types/bcrypt
+
