@@ -44,3 +44,10 @@ para ejecutar: npm run dev
 - npm i bcrypt
 - npm i --save-dev @types/bcrypt
 
+# Slug
+- npm i slug
+- npm i --save-dev @types/slug
+
+# Slugify (porque Slug no anda)
+- npm i slugify
+
