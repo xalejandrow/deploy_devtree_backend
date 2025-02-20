@@ -51,3 +51,6 @@ para ejecutar: npm run dev
 # Slugify (porque Slug no anda)
 - npm i slugify
 
+# Validación con Express Validator
+- npm i express-validator
+
