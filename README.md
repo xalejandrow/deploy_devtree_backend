@@ -54,3 +54,6 @@ para ejecutar: npm run dev
 # Validación con Express Validator
 - npm i express-validator
 
+# Habilitando CORS
+- npm i cors
+- npm i -D @types/cors
