@@ -1,8 +1,8 @@
 import  { Request, Response } from "express";
-import { validationResult } from "express-validator";
+import { check, validationResult } from "express-validator";
 import slug from 'slugify';
 import User from "../models/User";
-import { hashPassword } from "../utils/auth";
+import { hashPassword, checkPassword } from "../utils/auth";
 
 export const createAccount = async (req: Request, res: Response) => {
     // console.log(req.body);
@@ -55,12 +55,23 @@ export const login = async (req: Request, res: Response) => {
 
     const { email, password } = req.body;
 
+    // Revisar si el usuario está registrado
     const user = await User.findOne({ email });
     if(!user) {
         const error = new Error('El Usuario no existe')
         res.status(404).json({ error: error.message });
         return;
     }
-    console.log('Si existe...');
+
+    // Comprobar el password
+    const isPasswordCorrect = await checkPassword(password, user.password)
+    if(!isPasswordCorrect) {
+        const error = new Error('Password Incorrecto')
+        res.status(401).json({ error: error.message });
+        return;
+    }
+    
+    res.send('Autenticado...')
+
 
 }
