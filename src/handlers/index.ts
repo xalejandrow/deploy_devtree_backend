@@ -6,14 +6,7 @@ import { hashPassword, checkPassword } from "../utils/auth";
 
 export const createAccount = async (req: Request, res: Response) => {
     // console.log(req.body);
-
-    // Manejar errores de validación
-    const errors = validationResult(req);
-
-    if (!errors.isEmpty()) {
-        res.status(400).json({ errors: errors.array() });
-        return;
-    }
+    
 
     const { email, password } = req.body;
 

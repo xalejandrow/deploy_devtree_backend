@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { body } from "express-validator";
 import { createAccount, login } from "./handlers";
+import { handleInputErrors } from "./middleware/validation";
 
 const router = Router();
 
@@ -19,7 +20,7 @@ router.post('/auth/register',
         .notEmpty()
         .isLength({ min: 8 })
         .withMessage('El password debe tener al menos 8 caracteres'),
-        // .withMessage('El password no puede ir vacío'),
+    handleInputErrors,
     createAccount);
 
 router.post('/auth/login',
@@ -29,6 +30,7 @@ router.post('/auth/login',
     body('password')
         .notEmpty()
         .withMessage('El password es obligatorio'),
+    handleInputErrors,
     login
 );
 
