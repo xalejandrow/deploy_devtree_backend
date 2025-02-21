@@ -37,8 +37,20 @@ export const createAccount = async (req: Request, res: Response) => {
     const user = new User(req.body)
     user.password = await hashPassword(password)
     user.handle = handle
-
+    
     await user.save()
     res.status(200).send('Registro Creado Correctamente')
+    
+}
 
- }
+
+export const login = async (req: Request, res: Response) => {
+    
+    // Manejar errores de validación
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        res.status(400).json({ errors: errors.array() });
+        return;
+    }
+    
+}
