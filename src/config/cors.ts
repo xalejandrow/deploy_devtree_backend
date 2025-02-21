@@ -4,8 +4,7 @@ export const corsConfig: CorsOptions = {
     origin: function(origin, callback) {
         console.log('origin', origin);
         
-        if (origin === 'http://localhost:5173') {
-            // console.log('Permitir Conexión');
+        if (origin === process.env.FRONTEND_URL) {
             callback(null, true);
         } else {
             callback(new Error('Not allowed by CORS'));
