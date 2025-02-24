@@ -57,3 +57,7 @@ para ejecutar: npm run dev
 # Habilitando CORS
 - npm i cors
 - npm i -D @types/cors
+
+# JSON WebToken
+- npm i jsonwebtoken
+- npm i -D @types/jsonwebtoken
