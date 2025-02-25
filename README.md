@@ -61,3 +61,12 @@ para ejecutar: npm run dev
 # JSON WebToken
 - npm i jsonwebtoken
 - npm i -D @types/jsonwebtoken
+
+## Cloudinary
+Para guardar los archivos de imágenes
+https://cloudinary.com/
+
+- npm i cloudinary
+
+# Formidable para subir archivos
+- npm i formidable
