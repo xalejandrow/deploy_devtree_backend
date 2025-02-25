@@ -5,6 +5,7 @@ export interface IUser {
     name: string
     email: string
     password: string
+    desscription: string
 }
 
 const userSchema = new Schema({
@@ -32,6 +33,10 @@ const userSchema = new Schema({
         required: true, 
         minlength: 6 
     },
+    description: { 
+        type: String, 
+        default: '' 
+    }
 });
 
 const User = mongoose.model<IUser>('User', userSchema);
