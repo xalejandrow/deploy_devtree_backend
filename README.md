@@ -71,3 +71,7 @@ https://cloudinary.com/
 # Formidable para subir archivos
 - npm i formidable
 - npm i --save-dev @types/formidable
+
+# Unique ID
+- npm i uuid
+- npm i --save-dev @types/uuid
