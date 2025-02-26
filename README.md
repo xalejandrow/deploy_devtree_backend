@@ -70,3 +70,4 @@ https://cloudinary.com/
 
 # Formidable para subir archivos
 - npm i formidable
+- npm i --save-dev @types/formidable
