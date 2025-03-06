@@ -155,6 +155,26 @@ export const getUserByHandle = async (req: Request, res: Response) => {
    } catch (e) {
         const error = new Error('Hubo un error')
         res.status(500).json({ error: error.message });
+        return;
    }
     
+}
+
+export const searchByHandle = async (req: Request, res: Response, next: any) => {
+    try {
+        // console.log(req.body.handle);
+        const { handle } = req.body;
+        const userExists = await User.findOne({ handle });
+        if(userExists) {
+            const error = new Error(`${handle} ya está registrado`)
+            res.status(409).json({ error: error.message });
+            return;
+        }
+        res.status(200).send(`${handle} está disponible`)
+        
+    } catch (e) {
+        const error = new Error('Hubo un error')
+        res.status(500).json({ error: error.message });
+        return;
+    }
 }
